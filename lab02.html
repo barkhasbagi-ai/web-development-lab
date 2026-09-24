@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="mn">
+    <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Лаборатори 02: Хэрэглэгчийн анкет</title>
+</head>
+<body>
+ <!-- Вэбийн толгой хэсэг -->
+ <header> 
+ <h1>Оюутны Бүртгэлийн Портал</h1>
+ <!-- Навигацийн цэс -->
+ <nav>
+ <ul>
+ <li><a href="../index.html">Нүүр</a></li>
+ <li><a href="#">Анкет засах</a></li>
+ <li><a href="#">Тусламж</a></li>
+ </ul>
+ </nav>
+ </header>
+ <!-- Үндсэн контент -->
+ <main>
+ <article>
+ <section>
+ <h2>Хэрэглэгчийн Анкет Бөглөх</h2>
+ <p>Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв зааж бөглөнө үү.</p>
+ <!-- Форм энд байрлана -->
+ </section>
+ </article>
+ </main>
+ <!-- Хөл хэсэг -->
+ <footer>
+ <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+ </footer>
+</body>
+</html>
+<!-- Сонирхлын жагсаалт -->
+ <section>
+ <h2>Миний сонирхол</h2>
+ <ul>
+ <li>Веб хөгжүүлэлт</li>
+ <li>Сагсан бөмбөг тоглох</li>
+ <li>Кино үзэх</li>
+ <li>Ууланд алхах</li>
+ </ul>
+ </section>
+ <!-- Дүнгийн хүснэгт -->
+ <section>
+ <h2>Миний дүн</h2>
+ <table>
+ <thead>
+ <tr>
+ <th>Хичээл</th>
+ <th>Дүн</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Веб зохиомж</td>
+ <td>95</td>
+ </tr>
+ <tr>
+ <td>Мэдээллийн сан</td>
+ <td>88</td>
+ </tr>
+ <tr>
+ <td>Алгоритм</td>
+ <td>92</td>
+ </tr>
+ <tr>
+ <td>физик </td>
+ <td>98</td>
+ </tr>
+ <tr>
+ <td>Математиk</td>
+ <td>88</td>
+ </tr>
+ </tbody>
+ </table>
+ </section>
+<form action="#" method="POST" enctype="multipart/form-data">
+ <!-- 1-р бүлэг: Хувийн мэдээлэл -->
+ <fieldset>
+ <legend>Хувийн мэдээлэл</legend>
+ <label for="fullname">Овог нэр:</label><br>
+ <input type="text" id="fullname" name="fullname" placeholder="А.Ааааааа" required
+minlength="2"><br><br>
+ <label for="email">Цахим хаяг (Email):</label><br>
+ <input type="email" id="email" name="email" placeholder="example@domain.com"
+required><br><br>
+ <label for="password">Нууц үг:</label><br>
+ <input type="password" id="password" name="password" required minlength="6"><br><br>
+ <label for="phone">Утасны дугаар:</label><br>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88112233" required><br><br>
+
+<label for="address">Гэрийн хаяг:</label><br>
+<textarea id="address" name="address" rows="2" cols="50"
+    placeholder="Улаанбаатар хот, Баянзүрх дүүрэг, 5-р хороо, ..." required></textarea><br><br>
+<label for="citizenship">Иргэншил:</label><br>
+<input type="text" id="citizenship" name="citizenship" value="Монгол" placeholder="Монгол"><br><br>
+
+<label for="province">Харьяалагдах аймаг/дүүрэг:</label><br>
+<select id="province" name="province">
+    <option value="">-- Сонгоно уу --</option>
+    <option value="ub">Улаанбаатар</option>
+    <option value="darkhan">Дархан-Уул</option>
+    <option value="erdenet">Орхон</option>
+    <option value="other">Орон нутаг</option>
+</select><br><br>
+
+<label for="emergency_contact">Онцгой үед холбоо барих хүн (утас):</label><br>
+<input type="tel" id="emergency_contact" name="emergency_contact" pattern="[0-9]{8}" placeholder="99112233"><br><br>
+
+
+
+<label for="dob">Төрсөн огноо:</label><br>
+<input type="date" id="dob" name="dob" required><br><br>
+ <label for="dob">Төрсөн огноо:</label><br>
+ <input type="date" id="dob" name="dob" required><br><br>
+ <label>Хүйс:</label><br>
+ <input type="radio" id="male" name="gender" value="male">
+ <label for="male">Эрэгтэй</label>
+ <input type="radio" id="female" name="gender" value="female">
+ <label for="female">Эмэгтэй</label><br>
+ </fieldset>
+ <br>
+ <!-- 2-р бүлэг: Мэргэжил ба Сургалтын мэдээлэл -->
+ <fieldset>
+ <legend>Боловсрол ба Сонирхол</legend>
+ <label for="degree">Суралцаж буй түвшин:</label><br>
+ <select id="degree" name="degree" required>
+ <option value="">-- Сонгоно уу --</option>
+ <option value="bachelor">Бакалавр</option>
+ <option value="master">Магистр</option>
+ <option value="doctor">Докторант</option>
+ </select><br><br>
+ <label>Сонирхож буй технологиуд:</label><br>
+ <input type="checkbox" id="html" name="skills" value="HTML">
+ <label for="html">HTML5 / CSS3</label><br>
+ <input type="checkbox" id="js" name="skills" value="JavaScript">
+ <label for="js">JavaScript</label><br>
+ <input type="checkbox" id="php" name="skills" value="PHP">
+ <label for="php">PHP & MySQL</label><br><br>
+ <label for="avatar">Профайл зураг оруулна уу:</label><br>
+ <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
+ <label for="bio">Товч танилцуулга / Өөрийн тухай:</label><br>
+ <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Өөрийн танилцуулгыг энд бичнэ
+үү..."></textarea><br>
+<label for="school">Төгссөн сургууль:</label><br>
+<input type="text" id="school" name="school" placeholder="Улаанбаатарын 1-р сургууль"><br><br>
+
+<label for="faculty">Сурч буй факультет/тэнхим:</label><br>
+<input type="text" id="faculty" name="faculty" placeholder="Мэдээлэл технологийн сургууль"><br><br>
+
+<label for="year">Хэдэн курст суралцаж байна:</label><br>
+<select id="year" name="year">
+    <option value="1">1-р курс</option>
+    <option value="2">2-р курс</option>
+    <option value="3">3-р курс</option>
+    <option value="4">4-р курс</option>
+</select><br><br>
+<label>Өмнө нь ажил хийж байсан уу?</label><br>
+<input type="radio" id="worked_yes" name="worked_before" value="yes">
+<label for="worked_yes">Тийм</label>
+<input type="radio" id="worked_no" name="worked_before" value="no">
+<label for="worked_no">Үгүй</label><br><br>
+
+<label for="workplace">Ажиллаж байсан газар (байгууллагын нэр):</label><br>
+<input type="text" id="workplace" name="workplace" placeholder="Жишээ: Хас Банк ХХК"><br><br>
+
+<label for="position">Албан тушаал:</label><br>
+<input type="text" id="position" name="position" placeholder="Жишээ: Программист, Худалдааны зөвлөх"><br><br>
+
+<label for="work_duration">Хэдэн жил/сар ажилласан:</label><br>
+<input type="text" id="work_duration" name="work_duration" placeholder="Жишээ: 1 жил 3 сар"><br><br>
+
+<label for="work_description">Хийж байсан ажлын товч тайлбар:</label><br>
+<textarea id="work_description" name="work_description" rows="3" cols="50" placeholder="Ямар ажил, үүрэг гүйцэтгэж байсан талаараа бичнэ үү..."></textarea><br><br>
+<label for="gpa">Голч дүн (GPA):</label><br>
+<input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" placeholder="3.5"><br><br>
+<label>Хичээлээс гадуурх үйл ажиллагаанд оролцдог уу?</label><br>
+<input type="radio" id="active_yes" name="extracurricular" value="yes">
+<label for="active_yes">Тийм</label>
+<input type="radio" id="active_no" name="extracurricular" value="no">
+<label for="active_no">Үгүй</label><br><br>
+
+<label for="hobby">Хобби, чөлөөт цагаараа юу хийдэг вэ?</label><br>
+<textarea id="hobby" name="hobby" rows="3" cols="50" placeholder="Спорт, урлаг, ном унших г.м"></textarea><br><br>
+
+<label for="career_goal">Ирээдүйн зорилго / мэргэжлийн чиглэл:</label><br>
+<textarea id="career_goal" name="career_goal" rows="3" cols="50" placeholder="Программ хөгжүүлэгч болох..."></textarea><br><br>
+ </fieldset>
+ <br>
+ <!-- Илгээх ба Арилгах товчлуурууд -->
+ <button type="submit">Анкет Илгээх</button>
+ <button type="reset">Дахин эхлүүлэх</button>
+</form>
