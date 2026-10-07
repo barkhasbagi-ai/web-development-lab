@@ -1,0 +1,91 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Гарчиг, цэс */
+.header {
+  background-color: #2c5f8a;
+  color: white;
+  padding: 20px;
+}
+
+.title {
+  margin: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu a {
+  color: white;
+}
+
+/* Box model: хайрцаг */
+.box, .group {
+  width: 600px;
+  background-color: white;
+  border: 2px solid #2c5f8a;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+form {
+  width: 660px;
+  margin: 0 auto;
+}
+
+/* Талбар */
+.input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* Товч */
+.btn {
+  background-color: #2c5f8a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* position: relative / absolute */
+.help {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 120px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  display: none;
+}
+
+.help:hover .tooltip {
+  display: block;
+}
+
+.badge {
+  position: relative;
+  top: -3px;
+  background-color: orange;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
