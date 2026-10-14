@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Лаборатори 04: Flexbox ба Grid Layout</title>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #2c5f8a;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  color: #2c5f8a;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid #2c5f8a;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card h3 {
+  color: #2c5f8a;
+}
+
+.card p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.card .btn {
+  align-self: flex-start;
+}
+
+.btn {
+  background-color: #2c5f8a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #1e4466;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: start;
+}
+
+.widget {
+  background-color: white;
+  border: 2px solid #2c5f8a;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.widget h3 {
+  color: #2c5f8a;
+  margin-bottom: 12px;
+}
+
+.widget ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.widget a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.widget a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header,
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ </style>
+</head>
+<body>
+ <header class="header">
+ <h1 class="logo">Оюутны Портал</h1>
+ <nav>
+ <ul class="nav-menu">
+ <li><a href="index.html">Нүүр</a></li>
+ <li><a href="#courses">Хичээлүүд</a></li>
+ <li><a href="#news">Мэдээ</a></li>
+ <li><a href="#contact">Холбоо барих</a></li>
+ </ul>
+ </nav>
+ </header>
+
+ <div class="layout">
+ <main>
+ <section id="courses">
+ <h2 class="section-title">Сургалтын хөтөлбөрүүд</h2>
+ <div class="card-grid">
+ <article class="card">
+ <h3>Веб зохиомж</h3>
+ <p>HTML, CSS ашиглан хурдан, хариу үйлдэлтэй вэб хуудас зохиомжлохыг заана.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ <article class="card">
+ <h3>Мэдээллийн сан</h3>
+ <p>SQL болон өгөгдлийн сангийн загварчлалын үндсийг судална.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ <article class="card">
+ <h3>Алгоритм</h3>
+ <p>Өгөгдлийн бүтэц, эрэмбэлэх болон хайх алгоритмуудыг үзнэ.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ <article class="card">
+ <h3>JavaScript</h3>
+ <p>Вэб хуудсыг идэвхтэй болгох програмчлалын үндсэн ойлголтууд.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ <article class="card">
+ <h3>PHP ба MySQL</h3>
+ <p>Сервер талын програмчлал болон өгөгдлийн сантай ажиллах арга.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ <article class="card">
+ <h3>Математик</h3>
+ <p>Програмчлалд шаардлагатай дискрет болон шугаман алгебрын мэдлэг.</p>
+ <a href="#" class="btn">Дэлгэрэнгүй</a>
+ </article>
+ </div>
+ </section>
+ </main>
+
+ <aside class="sidebar">
+ <section class="widget" id="news">
+ <h3>Сүүлийн мэдээ</h3>
+ <ul>
+ <li><a href="#">Шинэ улирлын хичээл эхэллээ</a></li>
+ <li><a href="#">Лабораторийн хуваарь</a></li>
+ <li><a href="#">Шалгалтын бэлтгэл</a></li>
+ </ul>
+ </section>
+ <section class="widget">
+ <h3>Хэрэгтэй холбоос</h3>
+ <ul>
+ <li><a href="#">Сургуулийн сайт</a></li>
+ <li><a href="#">Цахим номын сан</a></li>
+ <li><a href="#">Дүнгийн систем</a></li>
+ </ul>
+ </section>
+ </aside>
+ </div>
+
+ <footer class="footer" id="contact">
+ <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+ <p>barkhasbagi@gmail.com</p>
+ </footer>
+</body>
+</html>
